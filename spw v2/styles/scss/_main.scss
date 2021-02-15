@@ -1,0 +1,95 @@
+main {
+    margin-top: 100px;
+    display: flex;
+    margin-bottom: 100px;
+
+
+    .heading {
+        min-height: 300px;
+        width: 50%;
+        text-align: center;
+        margin: 110px;
+
+        h1 {
+            font-size: 5rem;
+        }
+
+       h3 {
+        text-align: left;
+        padding-left: 45px;
+        margin-bottom: -80px;
+        box-sizing: border-box;
+       }
+       .line {
+           display: block;
+           height: 1px;
+           background-color: $headerbc;
+           margin-left: -100px;
+           margin-top: -80px;
+           filter: blur(1.2px);
+       }
+
+       p {
+           margin-top: 60px;
+       }
+
+    }
+
+    .imag {
+        box-sizing: border-box;
+        display: flex;
+        color: $mainbc;
+        width: 70%;
+        margin-left: 80px;
+        :hover {
+            transform: translateY(-35px);
+            transition:ease-in-out, 400ms;
+            :not(h3), :not(p){
+                transform: none;
+            }
+        }
+
+
+
+        img {
+            padding: 35px;
+        }
+
+    
+
+        .image-card1 {
+            background-color: $fontcolor;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 10px 25px 80px rgba(7, 7, 7, 0.644);
+            margin-right: 40px;
+            // margin-left: -0px;
+        }
+        .image-card2 {
+        
+            background-color: $fontcolor;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 10px 25px 80px rgba(7, 7, 7, 0.644);   
+        }  
+    }
+}
+
+main {
+    @include breakpoint-down(medium){
+        display: block;
+        text-align: center;
+        .heading {
+            width: min-content;
+        }
+        .imag {
+            display: block;
+            margin: 10px;
+        }
+
+        img {
+            width: 85%;
+
+        }
+    }
+}
